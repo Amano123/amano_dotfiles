@@ -18,8 +18,8 @@ setopt print_eight_bit
 
 ## ヒストリの設定
 HISTFILE=~/.zsh_history
-HISTSIZE=1000000
-SAVEHIST=1000000
+HISTSIZE=10000
+SAVEHIST=10000
 
 ## PROMPT
 # vcs_infoロード    
@@ -48,9 +48,17 @@ RPROMPT='[%F{green}%d%f]'
 
 ## Aliasの設定
 # core
+alias ls='ls --color=auto'
+alias ls='ls -G'
+alias ll='ls -alF'
+alias ll='ls -lh'
 alias ll='ls -l'
+alias la='ls -A'
 alias la='ls -a'
-alias rm='rm -ir'
+alias l='ls -CF'
+
+## zsh
+alias vz='vi ~/.zshrc'
 
 # rbenv
 eval "$(rbenv init -)"

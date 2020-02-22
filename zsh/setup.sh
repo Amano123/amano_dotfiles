@@ -1,6 +1,6 @@
 #!/bin/bash
 
-for f in ~/zsh_dotfiles/.??*
+for f in ~/amano_dotfiles/zsh/.??*
 do
   NAME=basename $f
   echo $NAME
