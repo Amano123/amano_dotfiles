@@ -1,6 +1,6 @@
 #!/bin/bash
 
-for f in ~/amano_dotfiles/vim/.??*
+for f in ~/dotfiles/vim/.??*
 do
   NAME=basename $f
   echo $NAME
