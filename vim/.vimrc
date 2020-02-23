@@ -38,6 +38,8 @@ nnoremap j gj
 nnoremap k gk
 " シンタックスハイライトの有効化
 syntax enable
+"カーソルが何行目の何列目を表示
+set ruler
 
 " Tab系
 " 不可視文字を可視化(タブが「▸-」と表示される)
