@@ -13,6 +13,7 @@ set hidden
 set showcmd
 "改行した時に、インデントを合わせる
 set autoindent
+set termguicolors
 
 " 見た目系
 " 行番号を表示
@@ -115,3 +116,7 @@ if len(s:removed_plugins) > 0
 endif
 " }}}
 "End dein Scripts-------------------------
+
+"junk-plugin
+colorscheme identity
+
