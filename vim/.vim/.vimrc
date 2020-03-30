@@ -1,5 +1,4 @@
 " setting
-
 "文字コードをUFT-8に設定
 set fenc=utf-8
 " バックアップファイルを作らない
@@ -117,4 +116,7 @@ if len(s:removed_plugins) > 0
 endif
 " }}}
 "End dein Scripts-------------------------
+
+"junk-plugin
+colorscheme identity
 

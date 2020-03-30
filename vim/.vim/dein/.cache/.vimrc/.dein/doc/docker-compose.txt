@@ -1,0 +1,154 @@
+*docker-compose.txt*	a summary
+
+Version : 0.0.1
+Author  : skanehira <sho19921005@gmai.com>
+License : MIT license  {{{
+    Permission is hereby granted, free of charge, to any person obtaining
+    a copy of this software and associated documentation files (the
+    "Software"), to deal in the Software without restriction, including
+    without limitation the rights to use, copy, modify, merge, publish,
+    distribute, sublicense, and/or sell copies of the Software, and to
+    permit persons to whom the Software is furnished to do so, subject to
+    the following conditions:
+    The above copyright notice and this permission notice shall be included
+    in all copies or substantial portions of the Software.
+
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
+    OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+    MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+    IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
+    CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
+    TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
+    SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+}}}
+
+==============================================================================
+CONTENTS					*docker-compose-contents*
+
+INTRODUCTION			|docker-compose-introduction|
+USAGE				|docker-compose-usage|
+INTERFACE			|docker-compose-interface|
+  COMMANDS			  |docker-compose-commands|
+  KEY-MAPPINGS			  |docker-compose-key-mappings|
+  FUNCTIONS			  |docker-compose-functions|
+TODO				|docker-compose-todo|
+CHANGELOG			|docker-compose-changelog|
+
+
+==============================================================================
+INTRODUCTION					*docker-compose-introduction*
+
+*docker-compose* is a Vim plugin.
+
+Latest version:
+https://github.com/skanehira/docker-compose.vim
+
+
+==============================================================================
+USAGE						*docker-compose-usage*
+
+
+
+==============================================================================
+INTERFACE					*docker-compose-interface*
+
+VARIABLES					*docker-variables*
+
+let g:docker_compose_open_terminal_way		*g:docker_compose_open_terminal_way*
+	Open termianl way.
+	Default value is 'vert'
+------------------------------------------------------------------------------
+COMMANDS					*docker-compose-commands*
+
+:DockerCompose {args}				*:DockerCompose*
+	This is wrap `docker-compose` command.
+	e.g. `:DockerCompose ps` is same as `docker-compose ps`
+
+:DockerComposeLogs {file}			*:DockerComposeLogs*
+	Monitoring containers logs.
+	This is same as `docker-compose -f {file} logs`
+	If {file} is no specified, the plugin will find
+	docker-compose.yaml from the current directory and use it.
+
+:DockerComposeList {file}			*:DockerComposeList*
+	Show containers.
+	This is same as `docker-compose -f {file} ps`
+
+:DockerComposeUp {file}				*:DockerComposeUp*
+	Build and create, up containers.
+	This is same as `docker-compose -f {file} up`
+
+:DockerComposeDown {file}			*:DockerComposeDown*
+	Stop and remove containers, networks.
+	This is same as `docker-compose -f {file} down`
+
+:DockerComposeDownAll {file}			*:DockerComposeDownAll*
+	Stop and remove containers, volumes, networks
+	and images, This is same as
+	`docker-compose -f {file} down --rmi all -v`
+
+:DockerComposeStart {file}			*:DockerComposeStart*
+	Start containers.
+	This is same as `docker-compose -f {file} start`
+
+:DockerComposeStop {file}			*:DockerComposeStop*
+	Stop containers.
+	This is same as `docker-compose -f {file} stop`
+
+:DockerComposeRestart {file}			*:DockerComposeRestart*
+	Restart containers.
+	This is same as `docker-compose -f {file} restart`
+
+:DockerComposeBuild {file}			*:DockerComposeBuild*
+	Build images.
+	This is same as `docker-compose -f {file} build`
+
+:DockerComposePull {file}			*:DockerComposePull*
+	Pull images.
+	This is same as `docker-compose -f {file} pull`
+
+:DockerComposeConfig {file}			*:DockerComposeConfig*
+	Show configs.
+	This is same as `docker-compose -f {file} config`
+
+:DockerComposeServices {file}			*:DockerComposeServices*
+	Show services.
+	This is same as `docker-compose -f {file} ps --services`
+
+:DockerComposeCreate {file}			*:DockerComposeCreate*
+	Create services.
+	This is same as `docker-compose -f {file} up --no-start`
+
+:DockerComposeRemove {file}			*:DockerComposeRemove*
+	Create services.
+	This is same as `docker-compose -f {file} rm -f`
+
+------------------------------------------------------------------------------
+KEY-MAPPINGS					*docker-compose-key-mappings*
+
+u						*docker-compose-list-u*
+	Start container.
+
+d						*docker-compose-list-d*
+	Stop container.
+
+u						*docker-compose-services-u*
+	Start service.
+
+s						*docker-compose-services-s*
+	Stop service.
+
+------------------------------------------------------------------------------
+FUNCTIONS					*docker-compose-functions*
+
+==============================================================================
+TODO						*docker-compose-todo*
+
+
+
+==============================================================================
+CHANGELOG					*docker-compose-changelog*
+
+
+==============================================================================
+vim:tw=78:ts=8:ft=help:norl:noet:fen:

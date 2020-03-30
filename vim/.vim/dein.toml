@@ -1,3 +1,4 @@
 [[plugins]]
 repo = 'junk-e/identity.vim'
-
+repo = 'skanehira/docker.vim'
+repo = 'skanehira/docker-compose.vim'
